@@ -1,6 +1,9 @@
 # git-learning-self
 Trying to learn git
 
+Git is used to push and pull your local code to origin or Viceverse whereas MAVEN is build tool & used to build the application (ie., to check whether our application is working fine or not)
+Basic difference between this are Git is like Storage or central repository for our code while Maven is like building the .war and .jar files of our application or project.
+
 ## While On-boarding (Basic steps to Clone & Build the Project)
 **Step 1** : Create a `Workspace` folder in your local.
 **Step 2** : Create another file with the version or basic on release then --> Right click + GitBash here
@@ -24,8 +27,9 @@ Trying to learn git
     -**Second Way (Using Intellij IDE)**
         - Goto Intellij IDE on rightbottom --> there will be an icon of branch.
         - Click on the branch icon --> in Search bar --> search for the `<branch_name>`.
-        - Once you search for that branch, it will ask you whether you need to checkout or not --> Click on `checkout`. 
+        - Once you search for that branch, it will ask you whether you need to checkout or not --> Click on `checkout`.
 
+### After this you will make the modifications to code according to your sprint features and use the below Commands to Push.
 
 ## Git Commands to Push and Deploy 
 Before doing anything you need to check wheather your local code is update to Parent/ master branch. For that you need to use `git pull`.
@@ -39,5 +43,13 @@ Before doing anything you need to check wheather your local code is update to Pa
 -`git add <file_name>` : To stage the modifications in that particular file.
 -`git add --a` : used to stage all the modifications in that repo (i.e., modifications in all the files of that repository)
 -`git commit -m <message>` : To push the changes that we staged to Parent/ Master branch (i.e., in real-time projects we mostly get the JIRA ticket number to identify).
+-`git push origin HEAD` : To push your local changes to origin Branch.
+
+
+## Maven Commands (Given in GitBash Terminal)
+-`mvn clean install` : used to clean and start installing the dependencies in `M2` folder in local internally build the project.
+-`mvn build` : just build the project and doesn't update dependencies. 
+-`mvn -DskipTests = true` : Skips the test cases while building the projects.
+-`mvn dependency:tree` : To know the hirerachy of dependencies (ie., what versions and configurations of dependencies were using in the project)
 
 
